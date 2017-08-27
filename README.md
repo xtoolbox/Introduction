@@ -38,3 +38,39 @@ But there is also a brand new way to setup the layout
        strech = "0,0,1"
    }
 ```
+## Example
+copy follow code in "script.lua", and put it into the same directory of [XToolBox.exe][exe_path], then run [XToolBox.exe][exe_path], you will get a lua edit box and a [run] button. 
+
+Click the run button, the log window will show the result " test(10,20) = 30"
+
+复制下面的代码到一个名为script.lua文件中，并把script.lua放在[XToolBox.exe][exe_path]的相同目录下，然后运行[XToolBox.exe][exe_path]，可以看到一个lua编辑框和一个按键。点击按键可以看到日志框中的运行结果，" test(10,20) = 30"。
+```lua
+class "SampleFrame"(QFrame)
+function SampleFrame:__init()
+   QFrame.__init(self)
+   self.btnRun = QPushButton("Run")
+   self.luaEdit = QLuaEdit()
+   self.luaEdit.plainText = [[
+function test(a ,b)
+  return a+b
+end
+logEdit:append(" test(10,20) = " .. test(10,20))
+]]
+   
+   self.layout = QHBoxLayout{
+     self.luaEdit,
+     self.btnRun
+   }
+   
+   self.btnRun.clicked = function()
+      loadstring(self.luaEdit.plainText)()
+   end
+end
+
+mdiArea:addSubWindow(SampleFrame()):show()
+```
+上面代码运行效果如下：
+
+![Alt text](/image/sample.png)
+
+[exe_path]: https://github.com/xtoolbox/Introduction/releases
