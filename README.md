@@ -6,7 +6,7 @@ XToolBox是一个基于Qt 4.8.5开发的应用程序框架，使用lua脚本进�
 
 Source code is available [here][xtoolbox_source]. 源代码在[这里][xtoolbox_source]。
 
-Pre Build Binary is [here][xtoolbox_donwload]. 编译好的可执行程序在这里[xtoolbox_donwload]。 
+Pre-build executable file is [here][xtoolbox_donwload]. 编译好的可执行程序在[这里][xtoolbox_donwload]。 
 
 # Qt feature in lua
 ## signal/slot
