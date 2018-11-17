@@ -4,7 +4,9 @@ can be used to make proto type of the application.
 
 XToolBox是一个基于Qt 4.8.5开发的应用程序框架，使用lua脚本进行界面元素开发。可以用于应用程序的快速原型开发。
 
-Source code is available [here][xtoolbox_source]. 源代码在[这里][xtoolbox_source]
+Source code is available [here][xtoolbox_source]. 源代码在[这里][xtoolbox_source]。
+
+Pre Build Binary is [here][xtoolbox_donwload]. 编译好的可执行程序在这里[xtoolbox_donwload]。 
 
 # Qt feature in lua
 ## signal/slot
@@ -78,3 +80,5 @@ mdiArea:addSubWindow(SampleFrame()):show()
 [exe_path]: https://github.com/xtoolbox/Introduction/releases
 
 [xtoolbox_source]: https://github.com/xtoolbox/qtlua
+
+[xtoolbox_donwload]: https://github.com/xtoolbox/Introduction/releases
